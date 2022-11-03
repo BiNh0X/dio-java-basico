@@ -56,6 +56,7 @@ public class Operadores {
 
         System.out.println(! casamento);
 
+
         // Operador Ternário.
         int a, b;
         String resultado = "";
@@ -72,6 +73,7 @@ public class Operadores {
         resultado = a == b ? "verdadeiro": "falso";
 
         System.out.println(resultado);
+
 
         // Operadores Relacionais.
         int numero1 = 2;
@@ -106,5 +108,25 @@ public class Operadores {
         System.out.println(nomeUm == nomeDois);
         System.out.println(nomeUm.equals(nomeDois));
 
+
+        // Operadores Lógicos
+        boolean condicao1 = false;
+        boolean condicao2 = true;
+
+        if (condicao1 || condicao2) {
+
+            if (condicao1 && condicao2) {
+
+                System.out.println("As DUAS condições são verdadeiras.");
+
+            }
+            else {
+
+            System.out.println("Apenas UMA das condições são verdadeiras.");
+
+            }
+        }
+
+        System.out.println("Fim.");
     }
 }
