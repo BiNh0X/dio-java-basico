@@ -122,7 +122,7 @@ public class Operadores {
             }
             else {
 
-            System.out.println("Apenas UMA das condições são verdadeiras.");
+                System.out.println("Apenas UMA das condições são verdadeiras.");
 
             }
         }
