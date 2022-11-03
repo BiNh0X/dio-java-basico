@@ -41,5 +41,14 @@ public class Operadores {
 
         System.out.println(numero);
 
+        numero = 10;
+
+        numero++;
+
+        System.out.println(numero);
+
+        boolean casamento = true;
+
+        System.out.println(! casamento);
     }
 }
