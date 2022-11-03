@@ -2,6 +2,7 @@ public class Operadores {
 
     public static void main(String[] args) {
         
+        // Operadores Aritméticos (e concatenação).
         String nomeCompleto = "LINGUAGEM" + " " + "JAVA";
         System.out.println(nomeCompleto);
 
@@ -27,6 +28,8 @@ public class Operadores {
 
         System.out.println(concatenacao);
 
+        
+        // Operadores Unários.
         int numero = 5;
 
         System.out.println(- numero);
@@ -50,5 +53,22 @@ public class Operadores {
         boolean casamento = true;
 
         System.out.println(! casamento);
+
+        // Operador Ternário.
+        int a, b;
+        String resultado = "";
+	    a = 5;
+	    b = 6;
+
+        if(a==b)
+   	        resultado = "verdadeiro";
+	    else
+   	        resultado = "falso";
+        
+        System.out.println(resultado);
+
+        resultado = a == b ? "verdadeiro": "falso";
+
+        System.out.println(resultado);
     }
 }
