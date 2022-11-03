@@ -1,3 +1,5 @@
+import javax.lang.model.util.ElementScanner6;
+
 public class Operadores {
 
     public static void main(String[] args) {
@@ -57,7 +59,7 @@ public class Operadores {
         // Operador Ternário.
         int a, b;
         String resultado = "";
-	    a = 5;
+	    a = 9;
 	    b = 6;
 
         if(a==b)
@@ -70,5 +72,39 @@ public class Operadores {
         resultado = a == b ? "verdadeiro": "falso";
 
         System.out.println(resultado);
+
+        // Operadores Relacionais.
+        int numero1 = 2;
+	    int numero2 = 8;
+
+        boolean simNao = numero1 == numero2;
+
+        System.out.println("numeroUm é igual a numeroDois? " + simNao);
+
+        simNao = numero1 != numero2;
+
+        System.out.println("numeroUm é diferente de numeroDois? " + simNao);
+        
+        simNao = numero1 > numero2;
+
+        System.out.println("numeroUm é maior que numeroDois? " + simNao);
+
+        if (numero1 > numero2) {
+
+            System.out.println("Número 1 é MAIOR.");
+
+        }        
+        else { 
+
+            System.out.println("Número 1 é MENOR.");
+
+        }
+
+        String nomeUm = "FABIO";
+        String nomeDois = new String("FABIO");  // Criando um novo Objeto.
+
+        System.out.println(nomeUm == nomeDois);
+        System.out.println(nomeUm.equals(nomeDois));
+
     }
 }
