@@ -7,4 +7,5 @@
 - Exemplo de um sistema de SmartTV
 - Executando _bytecodes_ no Terminal ou prompt de comando
 - Documentação Javadoc
+- Operadores Relacionais em Java
 
