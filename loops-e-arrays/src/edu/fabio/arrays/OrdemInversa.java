@@ -34,7 +34,7 @@ public class OrdemInversa {
             for (int k = 4; k >= 0; k--) {
 
                 if (k == 4) System.out.print("Ordem inversa = { " + vetor[k] + ", ");
-                else if (k == 0) System.out.print(vetor[k] + " }");
+                else if (k == 0) System.out.print(vetor[k] + " }\n");
                 else System.out.print(vetor[k] + ", ");
                 
             }
