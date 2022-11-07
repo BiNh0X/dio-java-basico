@@ -9,4 +9,5 @@
 - Documentação Javadoc
 - Operadores Relacionais em Java
 - Controle de fluxo e Boas práticas em Java
+- Estruturas de Repetição e Arrays
 
