@@ -13,11 +13,8 @@ public class NumerosAleatorios {
         int[] numerosAleatorios = new int[20];
         Random random = new Random();
         
-        for (int i = 0; i < numerosAleatorios.length; i++) {
-
-            numerosAleatorios[i] = random.nextInt(100); 
-
-        }        
+        for (int i = 0; i < numerosAleatorios.length; i++)
+            numerosAleatorios[i] = random.nextInt(100);       
 
         System.out.print("\nNúmeros aleatórios = ");
 
