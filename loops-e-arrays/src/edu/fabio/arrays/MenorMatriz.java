@@ -17,8 +17,8 @@ public class MenorMatriz {
         int posicaoX = 0;
         int posicaoY = 0;
 
-        for (int i = 0; i < 4; i++)
-            for (int j = 0; j < 4; j++) {
+        for (int i = 0; i < matriz.length; i++)
+            for (int j = 0; j < matriz[i].length; j++) {
 
                 matriz[i][j] = aleatorio.nextInt(9);
 
@@ -34,8 +34,8 @@ public class MenorMatriz {
 
         System.out.println("\nMatriz 4 x 4:");
     
-        for (int i = 0; i < 4; i++)
-            for (int j = 0; j < 4; j++) {
+        for (int i = 0; i < matriz.length; i++)
+            for (int j = 0; j < matriz[i].length; j++) {
 
                 if (j == 0) System.out.print("   " + matriz[i][j] + " ");
                 else if (j == 3) System.out.print(matriz[i][j] + "\n");
