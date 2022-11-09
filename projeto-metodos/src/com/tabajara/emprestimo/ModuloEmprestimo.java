@@ -1,7 +1,6 @@
 package com.tabajara.emprestimo;
 
 import java.util.Scanner;
-
 import java.util.Locale;
 
 
@@ -10,8 +9,6 @@ public class ModuloEmprestimo {
     public static void emprestimo() {        
 
         Scanner ler = new Scanner(System.in).useLocale(Locale.US);
-
-        CalculoEmprestimo emprestimo = new CalculoEmprestimo();
 
         do {
             System.out.println("\n====================================");
@@ -35,15 +32,16 @@ public class ModuloEmprestimo {
 
                 System.out.print("Quantidade de parcelas: ");
                 parcelas = ler.nextInt();
-
             }
+            
+            CalculoEmprestimo emprestimo = new CalculoEmprestimo();
 
             switch (opcao) {
                 
                 case 1:
                     emprestimo.mostrarValorTotal(valorEmprestimo, parcelas);
                     break;
-                    
+
                 case 2:
                     emprestimo.mostrarTaxaJuros();
                     break;
@@ -54,11 +52,9 @@ public class ModuloEmprestimo {
                 default:
                     System.out.println("\nErro: opção inválida!");
                     break;
-
             }
 
             if (opcao == 0) break;
-
         } while (true);
     }
 }

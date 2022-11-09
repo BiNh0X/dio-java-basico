@@ -1,7 +1,6 @@
 package com.tabajara.calculadora;
 
 import java.util.Scanner;
-
 import java.util.Locale;
 
 
@@ -10,7 +9,6 @@ public class ModuloCalculadora {
     public static void calcular() {
 
         Calculadora calculadora = new Calculadora();
-
         Scanner ler = new Scanner(System.in).useLocale(Locale.US);
 
         do {
@@ -34,7 +32,6 @@ public class ModuloCalculadora {
 
                 System.out.print("2º Valor: ");
                 valor2 = ler.nextDouble();
-
             }                
 
             switch (opcao) {
@@ -61,11 +58,9 @@ public class ModuloCalculadora {
                 default:
                     System.out.println("\nErro: opção inválida!");
                     break;
-
             }
 
             if (opcao == 0) break;
-
         } while (true);        
     }
 }

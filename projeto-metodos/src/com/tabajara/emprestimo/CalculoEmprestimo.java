@@ -1,9 +1,7 @@
 package com.tabajara.emprestimo;
 
 import java.text.DecimalFormat;
-
 import java.text.NumberFormat;
-
 import com.tabajara.mensagem.Saudacoes;
 
 /*
@@ -25,8 +23,7 @@ public class CalculoEmprestimo {
     public double calcularEmprestimo(double valorPresente, int prazo) {
         
         double valorFuturo = valorPresente * Math.pow((1 + TAXA / 100), prazo);
-        return valorFuturo;        
-
+        return valorFuturo;
     }
 
     public void mostrarValorTotal(double valorEmprestimo, int tempo) {
@@ -36,13 +33,11 @@ public class CalculoEmprestimo {
         double valorTotal = calcularEmprestimo(valorEmprestimo, tempo);
         System.out.print("Valor total = R$ " + formatarDouble.format(valorTotal));                    
         parar.continuarMenu();
-
     }
     
     public void mostrarTaxaJuros() {
 
         System.out.println("Taxa de juros atual = " + TAXA + "%");
         parar.continuarMenu();
-
     }    
 }

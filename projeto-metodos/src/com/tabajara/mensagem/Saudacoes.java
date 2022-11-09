@@ -1,9 +1,7 @@
 package com.tabajara.mensagem;
 
 import java.time.LocalDateTime;
-
 import java.io.Console;
-
 import java.time.format.DateTimeFormatter;
 
 
@@ -16,8 +14,7 @@ public class Saudacoes {
         String hora = formatarHora.format(agora);
         
         int horaInteiro = Integer.parseInt(hora);
-        return mensagem(horaInteiro);
-        
+        return mensagem(horaInteiro);        
     }
 
     public String mensagem(int hora) {
@@ -25,21 +22,17 @@ public class Saudacoes {
         if (hora >= 5 && hora < 12) { // Entre 5 e 11 da manhã.
             
             return "Bom dia!";
-
         } 
         else if (hora >= 12 && hora < 18) { // Entre meio dia (12h) e 17 (5h) da tarde.
             
             return "Boa tarde!";
-
         } 
         else if (hora >= 18 && hora < 5) { // Entre 18 (6h) e 4 (4h) da noite.
             
             return "Boa noite!";
-
         }
 
         return null;
-
     }
 
     public void continuarMenu() {
@@ -48,7 +41,6 @@ public class Saudacoes {
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
         esperar.readLine();
-
     }
 
     public String horaAtual() {
@@ -59,7 +51,6 @@ public class Saudacoes {
         String horaFormatada = formatarHora.format(agora);
 
         return horaFormatada;
-
     }
 
     public String dataAtual() {
@@ -70,6 +61,5 @@ public class Saudacoes {
         String dataFormatada = formatarData.format(agora);
 
         return dataFormatada;
-
     }    
 }

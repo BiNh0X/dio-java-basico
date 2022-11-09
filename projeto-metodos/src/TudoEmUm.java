@@ -1,11 +1,7 @@
 import com.tabajara.calculadora.ModuloCalculadora;
-
 import com.tabajara.emprestimo.ModuloEmprestimo;
-
 import com.tabajara.mensagem.Saudacoes;
-
 import java.util.Scanner;
-
 import java.util.Locale;
 
 /*
@@ -57,24 +53,19 @@ public class TudoEmUm {
 
                         if (sair == 's') break;
                         else {
-
                             opcao = 1;
                             break;
-
                         }
                         
                     default:
                         System.out.println("\nErro: opção inválida!");
                         break;
-
                 }
 
                 if (opcao == 0) break;
-
             } while (true);
 
             System.out.println("\nSucesso: Execução terminada.");
-
         }        
     }    
 }
