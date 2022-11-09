@@ -2,6 +2,8 @@ package com.tabajara.mensagem;
 
 import java.time.LocalDateTime;
 
+import java.io.Console;
+
 import java.time.format.DateTimeFormatter;
 
 
@@ -38,6 +40,15 @@ public class Saudacoes {
         }
 
         return null;
+
+    }
+
+    public void continuarMenu() {
+
+        Console esperar = System.console();
+
+        System.out.print("\n\n Pressione <ENTER> para continuar...");
+        esperar.readLine();
 
     }
 

@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 import java.text.NumberFormat;
 
-import com.tabajara.mensagem.MensagemEspera;
+import com.tabajara.mensagem.Saudacoes;
 
 /*
  * Fórmula: Cálculo de Juros Compostos
@@ -20,7 +20,7 @@ import com.tabajara.mensagem.MensagemEspera;
 public class CalculoEmprestimo {
 
     public static final double TAXA = 4.5;
-    MensagemEspera parar = new MensagemEspera();    
+    Saudacoes parar = new Saudacoes();    
 
     public double calcularEmprestimo(double valorPresente, int prazo) {
         

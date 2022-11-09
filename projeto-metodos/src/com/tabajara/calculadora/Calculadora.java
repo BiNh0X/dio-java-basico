@@ -1,11 +1,11 @@
 package com.tabajara.calculadora;
 
-import com.tabajara.mensagem.MensagemEspera;
+import com.tabajara.mensagem.Saudacoes;
 
 
 public class Calculadora {
     
-    MensagemEspera parar = new MensagemEspera();
+    Saudacoes parar = new Saudacoes();
 
     public void doubleParaInteiro(double valorDecimal) {
 
