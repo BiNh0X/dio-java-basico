@@ -7,6 +7,15 @@ public class Calculadora {
     
     Console esperar = System.console();
 
+    public void doubleParaInteiro(double valorDecimal) {
+
+        int valorInteiro = (int) valorDecimal;
+
+        if (valorDecimal == valorInteiro) System.out.print(valorInteiro);
+        else System.out.print(valorDecimal);
+
+    }
+
     public void somar(double operando1, double operando2) {        
 
         System.out.print("RESULTADO: ");
@@ -14,9 +23,7 @@ public class Calculadora {
         System.out.print(" + ");
         doubleParaInteiro(operando2);
         System.out.print(" = ");
-
-        double resultado = operando1 + operando2;
-        doubleParaInteiro(resultado);
+        doubleParaInteiro(operando1 + operando2);
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
         esperar.readLine();
@@ -30,9 +37,7 @@ public class Calculadora {
         System.out.print(" - ");
         doubleParaInteiro(operando2);
         System.out.print(" = ");
-
-        double resultado = operando1 - operando2;
-        doubleParaInteiro(resultado);
+        doubleParaInteiro(operando1 - operando2);
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
         esperar.readLine();
@@ -46,9 +51,7 @@ public class Calculadora {
         System.out.print(" x ");
         doubleParaInteiro(operando2);
         System.out.print(" = ");
-
-        double resultado = operando1 * operando2;
-        doubleParaInteiro(resultado);
+        doubleParaInteiro(operando1 * operando2);
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
         esperar.readLine();
@@ -62,21 +65,10 @@ public class Calculadora {
         System.out.print(" ÷ ");
         doubleParaInteiro(operando2);
         System.out.print(" = ");
-
-        double resultado = operando1 / operando2;
-        doubleParaInteiro(resultado);
+        doubleParaInteiro(operando1 / operando2);
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
         esperar.readLine();
 
-    }
-
-    public void doubleParaInteiro(double valorDecimal) {
-
-        int valorInteiro = (int) valorDecimal;
-
-        if (valorDecimal == valorInteiro) System.out.print(valorInteiro);
-        else System.out.print(valorDecimal);
-
-    }
+    }    
 }

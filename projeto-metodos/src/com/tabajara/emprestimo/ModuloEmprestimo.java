@@ -41,7 +41,7 @@ public class ModuloEmprestimo {
             switch (opcao) {
                 
                 case 1:
-                    emprestimo.mostrarValorTotal(emprestimo.calcularEmprestimo(valorEmprestimo, parcelas));
+                    emprestimo.mostrarValorTotal(valorEmprestimo, parcelas);
                     break;
                 case 2:
                     emprestimo.mostrarTaxaJuros();
