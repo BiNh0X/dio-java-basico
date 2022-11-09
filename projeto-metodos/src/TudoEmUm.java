@@ -1,8 +1,9 @@
 import com.tabajara.calculadora.ModuloCalculadora;
 import com.tabajara.emprestimo.ModuloEmprestimo;
 import com.tabajara.mensagem.Saudacoes;
-import java.util.Scanner;
+
 import java.util.Locale;
+import java.util.Scanner;
 
 /*
  * ATENÇÃO!

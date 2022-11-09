@@ -1,7 +1,7 @@
 package com.tabajara.emprestimo;
 
-import java.util.Scanner;
 import java.util.Locale;
+import java.util.Scanner;
 
 
 public class ModuloEmprestimo {
@@ -33,7 +33,7 @@ public class ModuloEmprestimo {
                 System.out.print("Quantidade de parcelas: ");
                 parcelas = ler.nextInt();
             }
-            
+
             CalculoEmprestimo emprestimo = new CalculoEmprestimo();
 
             switch (opcao) {

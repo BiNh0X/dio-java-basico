@@ -1,8 +1,8 @@
 package com.tabajara.mensagem;
 
-import java.time.LocalDateTime;
 import java.io.Console;
 import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 
 
 public class Saudacoes {
