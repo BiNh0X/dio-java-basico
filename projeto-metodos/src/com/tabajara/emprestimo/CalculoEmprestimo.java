@@ -16,9 +16,8 @@ public class CalculoEmprestimo {
     public double calcularEmprestimo(double valorEmprestimo, int tempo) {
 
         double valorFuturo;
-        double taxa = taxaJuros();
 
-        valorFuturo = valorEmprestimo * Math.pow((1 + taxa / 100), tempo);
+        valorFuturo = valorEmprestimo * Math.pow((1 + taxaJuros() / 100), tempo);
 
         return valorFuturo;
 
