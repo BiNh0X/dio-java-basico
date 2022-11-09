@@ -19,18 +19,14 @@ public class Saudacoes {
 
     public String mensagem(int hora) {
 
-        if (hora >= 5 && hora < 12) { // Entre 5 e 11 da manhã.
+        // Entre 5 e 11 da manhã.
+        if (hora >= 5 && hora < 12) return "Bom dia!";            
             
-            return "Bom dia!";
-        } 
-        else if (hora >= 12 && hora < 18) { // Entre meio dia (12h) e 17 (5h) da tarde.
-            
-            return "Boa tarde!";
-        } 
-        else if (hora >= 18 && hora < 5) { // Entre 18 (6h) e 4 (4h) da noite.
-            
-            return "Boa noite!";
-        }
+        // Entre meio dia (12h) e 17 (5h) da tarde.
+        else if (hora >= 12 && hora < 18) return "Boa tarde!";
+
+        // Entre 18 (6h) e 4 (4h) da noite.
+        else if (hora >= 18 || hora < 5) return "Boa noite!";     
 
         return null;
     }
