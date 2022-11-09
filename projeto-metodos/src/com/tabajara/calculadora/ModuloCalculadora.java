@@ -8,14 +8,9 @@ import java.util.Locale;
 public class ModuloCalculadora {
     
     public static void calcular() {
-        
-        double valor1 = 0, valor2 = 0;
-        int opcao;
 
         Calculadora calculadora = new Calculadora();
 
-        // Erro: fechar o "Scanner" irá gerar uma exceção ao
-        // retornar para o menu inicial através da opção 5.
         Scanner ler = new Scanner(System.in).useLocale(Locale.US);
 
         do {
@@ -27,8 +22,10 @@ public class ModuloCalculadora {
             System.out.println("\n    1 - Adição\n    2 - Subtração\n    3 - Multiplicação\n    4 - Divisão\n    0 - Menu inicial\n");
             System.out.println("------------------------------------");
                
+            double valor1 = 0, valor2 = 0;
+            
             System.out.print("Escolha uma opção: ");
-            opcao = ler.nextInt();
+            int opcao = ler.nextInt();
 
             if ((opcao >= 1) && (opcao <= 4)) {
 

@@ -13,10 +13,7 @@ import java.util.Locale;
 
 public class ModuloEmprestimo {
     
-    public static void emprestimo() {
-
-        double valorEmprestimo = 0.0;
-        int quantidadeMeses = 0;
+    public static void emprestimo() {        
 
         Scanner ler = new Scanner(System.in).useLocale(Locale.US);
 
@@ -35,6 +32,9 @@ public class ModuloEmprestimo {
             System.out.println("\n    1 - Calcular Empréstimo\n    2 - Taxa de juros\n    0 - Menu inicial\n");
             System.out.println("------------------------------------");
                 
+            double valorEmprestimo = 0;
+            int quantidadeMeses = 0;
+            
             System.out.print("Escolha uma opção: ");
             int opcao = ler.nextInt();
 
@@ -59,8 +59,7 @@ public class ModuloEmprestimo {
 
                     break;
                 case 2:
-                    double juros = valor.taxaJuros();
-                    System.out.println("Taxa de juros atual = " + juros + "%");
+                    System.out.println("Taxa de juros atual = " + valor.taxaJuros() + "%");
 
                     System.out.print("\n Pressione <ENTER> para continuar...");
                     esperar.readLine();

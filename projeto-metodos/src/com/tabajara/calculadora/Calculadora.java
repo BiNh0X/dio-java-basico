@@ -7,15 +7,15 @@ public class Calculadora {
     
     Console esperar = System.console();
 
-    public void somar(double operando1, double operando2) {
-
-        double resultado = operando1 + operando2;
+    public void somar(double operando1, double operando2) {        
 
         System.out.print("RESULTADO: ");
         converterDouble(operando1);
         System.out.print(" + ");
         converterDouble(operando2);
         System.out.print(" = ");
+
+        double resultado = operando1 + operando2;
         converterDouble(resultado);
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
@@ -23,15 +23,15 @@ public class Calculadora {
 
     }
 
-    public void subtrair(double operando1, double operando2) {
-
-        double resultado = operando1 - operando2;
+    public void subtrair(double operando1, double operando2) {        
 
         System.out.print("RESULTADO: ");
         converterDouble(operando1);
         System.out.print(" - ");
         converterDouble(operando2);
         System.out.print(" = ");
+
+        double resultado = operando1 - operando2;
         converterDouble(resultado);
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
@@ -39,15 +39,15 @@ public class Calculadora {
 
     }
 
-    public void multiplicar(double operando1, double operando2) {
-
-        double resultado = operando1 * operando2;
+    public void multiplicar(double operando1, double operando2) {        
 
         System.out.print("RESULTADO: ");
         converterDouble(operando1);
         System.out.print(" x ");
         converterDouble(operando2);
         System.out.print(" = ");
+
+        double resultado = operando1 * operando2;
         converterDouble(resultado);
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
@@ -55,15 +55,15 @@ public class Calculadora {
 
     }
 
-    public void dividir(double operando1, double operando2) {
-       
-        double resultado = operando1 / operando2;
+    public void dividir(double operando1, double operando2) {        
         
         System.out.print("RESULTADO: ");
         converterDouble(operando1);
         System.out.print(" ÷ ");
         converterDouble(operando2);
         System.out.print(" = ");
+
+        double resultado = operando1 / operando2;
         converterDouble(resultado);
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
