@@ -7,7 +7,6 @@ import java.io.Console;
 import java.time.format.DateTimeFormatter;
 
 
-
 public class Saudacoes {
     
     public String saudacao() {    
