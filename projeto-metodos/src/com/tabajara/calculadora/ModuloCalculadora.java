@@ -42,15 +42,19 @@ public class ModuloCalculadora {
                 case 1:
                     calculadora.somar(valor1, valor2);
                     break;
+
                 case 2:
                     calculadora.subtrair(valor1, valor2);
                     break;
+
                 case 3:
                     calculadora.multiplicar(valor1, valor2);
                     break;
+
                 case 4:
                     calculadora.dividir(valor1, valor2);
                     break;
+                    
                 case 0:    
                     break;        
 

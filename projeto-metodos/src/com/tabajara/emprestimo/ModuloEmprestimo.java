@@ -43,9 +43,11 @@ public class ModuloEmprestimo {
                 case 1:
                     emprestimo.mostrarValorTotal(valorEmprestimo, parcelas);
                     break;
+                    
                 case 2:
                     emprestimo.mostrarTaxaJuros();
                     break;
+
                 case 0:
                     break;
 

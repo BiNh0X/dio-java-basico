@@ -46,20 +46,23 @@ public class TudoEmUm {
                     case 1:
                         ModuloCalculadora.calcular();
                         break;
+
                     case 2:
                         ModuloEmprestimo.emprestimo();
                         break;
+
                     case 0:
                         System.out.print("Deseja sair? [S/n] ");
                         char sair = ler.next().charAt(0);
 
                         if (sair == 's') break;
-                        else if (sair == 'n') {
+                        else {
 
                             opcao = 1;
                             break;
 
                         }
+                        
                     default:
                         System.out.println("\nErro: opção inválida!");
                         break;
