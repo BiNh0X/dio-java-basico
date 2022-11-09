@@ -14,25 +14,31 @@ public class Saudacoes {
         DateTimeFormatter formatarHora = DateTimeFormatter.ofPattern("HH");
         String hora = formatarHora.format(agora);
         
-        int horaInt = Integer.parseInt(hora);
+        int horaInteiro = Integer.parseInt(hora);
+        return mensagem(horaInteiro);
+        
+    }
 
-        if (horaInt >= 5 && horaInt < 12) { // Entre 5 e 11 da manhã.
+    public String mensagem(int hora) {
+
+        if (hora >= 5 && hora < 12) { // Entre 5 e 11 da manhã.
             
             return "Bom dia!";
 
         } 
-        else if (horaInt >= 12 && horaInt < 18) { // Entre meio dia (12h) e 17 (5h) da tarde.
+        else if (hora >= 12 && hora < 18) { // Entre meio dia (12h) e 17 (5h) da tarde.
             
             return "Boa tarde!";
 
         } 
-        else if (horaInt >= 18 && horaInt < 5) { // Entre 18 (6h) e 4 (4h) da noite.
+        else if (hora >= 18 && hora < 5) { // Entre 18 (6h) e 4 (4h) da noite.
             
             return "Boa noite!";
 
         }
 
-        return hora;
+        return null;
+
     }
 
     public String horaAtual() {
@@ -55,5 +61,5 @@ public class Saudacoes {
 
         return dataFormatada;
 
-    }
+    }    
 }

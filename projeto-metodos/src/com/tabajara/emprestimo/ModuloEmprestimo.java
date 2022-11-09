@@ -2,12 +2,6 @@ package com.tabajara.emprestimo;
 
 import java.util.Scanner;
 
-import java.io.Console;
-
-import java.text.DecimalFormat;
-
-import java.text.NumberFormat;
-
 import java.util.Locale;
 
 
@@ -17,11 +11,7 @@ public class ModuloEmprestimo {
 
         Scanner ler = new Scanner(System.in).useLocale(Locale.US);
 
-        Console esperar = System.console();
-
-        NumberFormat formatarDouble = new DecimalFormat("#0.00");
-
-        CalculoEmprestimo valor = new CalculoEmprestimo();
+        CalculoEmprestimo emprestimo = new CalculoEmprestimo();
 
         do {
             System.out.println("\n====================================");
@@ -33,7 +23,7 @@ public class ModuloEmprestimo {
             System.out.println("------------------------------------");
                 
             double valorEmprestimo = 0;
-            int quantidadeMeses = 0;
+            int parcelas = 0;
             
             System.out.print("Escolha uma opção: ");
             int opcao = ler.nextInt();
@@ -44,26 +34,17 @@ public class ModuloEmprestimo {
                 valorEmprestimo = ler.nextDouble();
 
                 System.out.print("Quantidade de parcelas: ");
-                quantidadeMeses = ler.nextInt();
+                parcelas = ler.nextInt();
 
             }
 
             switch (opcao) {
                 
                 case 1:
-                    double valorTotal = valor.calcularEmprestimo(valorEmprestimo, quantidadeMeses);
-                    System.out.println("Valor total = R$ " + formatarDouble.format(valorTotal));
-                    
-                    System.out.print("\n Pressione <ENTER> para continuar...");
-                    esperar.readLine();
-
+                    emprestimo.mostrarValorTotal(emprestimo.calcularEmprestimo(valorEmprestimo, parcelas));
                     break;
                 case 2:
-                    System.out.println("Taxa de juros atual = " + valor.taxaJuros() + "%");
-
-                    System.out.print("\n Pressione <ENTER> para continuar...");
-                    esperar.readLine();
-
+                    emprestimo.mostrarTaxaJuros();
                     break;
                 case 0:
                     break;

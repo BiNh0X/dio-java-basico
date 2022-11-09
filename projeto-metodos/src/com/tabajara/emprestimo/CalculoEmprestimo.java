@@ -1,7 +1,13 @@
 package com.tabajara.emprestimo;
 
+import java.text.DecimalFormat;
+
+import java.text.NumberFormat;
+
+import java.io.Console;
+
 /*
- * Fórmula: Cálculo Juros Compostos
+ * Fórmula: Cálculo de Juros Compostos
  * 
  *      FV = PV x (1+i)^n 
  * 
@@ -13,18 +19,32 @@ package com.tabajara.emprestimo;
 
 public class CalculoEmprestimo {
 
+    Console esperar = System.console();
+
+    public static final double TAXA = 4.5;
+
     public double calcularEmprestimo(double valorEmprestimo, int tempo) {
-
-        double valorFuturo;
-        valorFuturo = valorEmprestimo * Math.pow((1 + taxaJuros() / 100), tempo);
-
-        return valorFuturo;
+        
+        double valorFuturo = valorEmprestimo * Math.pow((1 + TAXA / 100), tempo);
+        return valorFuturo;        
 
     }
 
-    public double taxaJuros() {
+    public void mostrarValorTotal(double valorTotal) {
 
-        return 4.5;
+        NumberFormat formatarDouble = new DecimalFormat("#0.00");
+
+        System.out.println("Valor total = R$ " + formatarDouble.format(valorTotal));                    
+        System.out.print("\n Pressione <ENTER> para continuar...");
+        esperar.readLine();
+
+    }
+    
+    public void mostrarTaxaJuros() {
+
+        System.out.println("Taxa de juros atual = " + TAXA + "%");
+        System.out.print("\n Pressione <ENTER> para continuar...");
+        esperar.readLine();
 
     }    
 }

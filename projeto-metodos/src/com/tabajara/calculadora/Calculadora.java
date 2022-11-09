@@ -10,13 +10,13 @@ public class Calculadora {
     public void somar(double operando1, double operando2) {        
 
         System.out.print("RESULTADO: ");
-        converterDouble(operando1);
+        doubleParaInteiro(operando1);
         System.out.print(" + ");
-        converterDouble(operando2);
+        doubleParaInteiro(operando2);
         System.out.print(" = ");
 
         double resultado = operando1 + operando2;
-        converterDouble(resultado);
+        doubleParaInteiro(resultado);
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
         esperar.readLine();
@@ -26,13 +26,13 @@ public class Calculadora {
     public void subtrair(double operando1, double operando2) {        
 
         System.out.print("RESULTADO: ");
-        converterDouble(operando1);
+        doubleParaInteiro(operando1);
         System.out.print(" - ");
-        converterDouble(operando2);
+        doubleParaInteiro(operando2);
         System.out.print(" = ");
 
         double resultado = operando1 - operando2;
-        converterDouble(resultado);
+        doubleParaInteiro(resultado);
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
         esperar.readLine();
@@ -42,13 +42,13 @@ public class Calculadora {
     public void multiplicar(double operando1, double operando2) {        
 
         System.out.print("RESULTADO: ");
-        converterDouble(operando1);
+        doubleParaInteiro(operando1);
         System.out.print(" x ");
-        converterDouble(operando2);
+        doubleParaInteiro(operando2);
         System.out.print(" = ");
 
         double resultado = operando1 * operando2;
-        converterDouble(resultado);
+        doubleParaInteiro(resultado);
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
         esperar.readLine();
@@ -58,20 +58,20 @@ public class Calculadora {
     public void dividir(double operando1, double operando2) {        
         
         System.out.print("RESULTADO: ");
-        converterDouble(operando1);
+        doubleParaInteiro(operando1);
         System.out.print(" ÷ ");
-        converterDouble(operando2);
+        doubleParaInteiro(operando2);
         System.out.print(" = ");
 
         double resultado = operando1 / operando2;
-        converterDouble(resultado);
+        doubleParaInteiro(resultado);
 
         System.out.print("\n\n Pressione <ENTER> para continuar...");
         esperar.readLine();
 
     }
 
-    public void converterDouble(double valorDecimal) {
+    public void doubleParaInteiro(double valorDecimal) {
 
         int valorInteiro = (int) valorDecimal;
 
