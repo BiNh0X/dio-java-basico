@@ -1,11 +1,11 @@
 package com.tabajara.calculadora;
 
-import java.io.Console;
+import com.tabajara.mensagem.MensagemEspera;
 
 
 public class Calculadora {
     
-    Console esperar = System.console();
+    MensagemEspera parar = new MensagemEspera();
 
     public void doubleParaInteiro(double valorDecimal) {
 
@@ -24,9 +24,7 @@ public class Calculadora {
         doubleParaInteiro(operando2);
         System.out.print(" = ");
         doubleParaInteiro(operando1 + operando2);
-
-        System.out.print("\n\n Pressione <ENTER> para continuar...");
-        esperar.readLine();
+        parar.continuarMenu();
 
     }
 
@@ -38,9 +36,7 @@ public class Calculadora {
         doubleParaInteiro(operando2);
         System.out.print(" = ");
         doubleParaInteiro(operando1 - operando2);
-
-        System.out.print("\n\n Pressione <ENTER> para continuar...");
-        esperar.readLine();
+        parar.continuarMenu();
 
     }
 
@@ -52,9 +48,7 @@ public class Calculadora {
         doubleParaInteiro(operando2);
         System.out.print(" = ");
         doubleParaInteiro(operando1 * operando2);
-
-        System.out.print("\n\n Pressione <ENTER> para continuar...");
-        esperar.readLine();
+        parar.continuarMenu();
 
     }
 
@@ -66,9 +60,7 @@ public class Calculadora {
         doubleParaInteiro(operando2);
         System.out.print(" = ");
         doubleParaInteiro(operando1 / operando2);
-
-        System.out.print("\n\n Pressione <ENTER> para continuar...");
-        esperar.readLine();
+        parar.continuarMenu();
 
     }    
 }

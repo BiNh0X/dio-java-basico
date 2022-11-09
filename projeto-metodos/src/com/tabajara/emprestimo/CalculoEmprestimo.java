@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 import java.text.NumberFormat;
 
-import java.io.Console;
+import com.tabajara.mensagem.MensagemEspera;
 
 /*
  * Fórmula: Cálculo de Juros Compostos
@@ -19,9 +19,8 @@ import java.io.Console;
 
 public class CalculoEmprestimo {
 
-    Console esperar = System.console();
-
     public static final double TAXA = 4.5;
+    MensagemEspera parar = new MensagemEspera();    
 
     public double calcularEmprestimo(double valorPresente, int prazo) {
         
@@ -35,17 +34,15 @@ public class CalculoEmprestimo {
         NumberFormat formatarDouble = new DecimalFormat("#0.00");
 
         double valorTotal = calcularEmprestimo(valorEmprestimo, tempo);
-        System.out.println("Valor total = R$ " + formatarDouble.format(valorTotal));                    
-        System.out.print("\n Pressione <ENTER> para continuar...");
-        esperar.readLine();
+        System.out.print("Valor total = R$ " + formatarDouble.format(valorTotal));                    
+        parar.continuarMenu();
 
     }
     
     public void mostrarTaxaJuros() {
 
         System.out.println("Taxa de juros atual = " + TAXA + "%");
-        System.out.print("\n Pressione <ENTER> para continuar...");
-        esperar.readLine();
+        parar.continuarMenu();
 
     }    
 }
