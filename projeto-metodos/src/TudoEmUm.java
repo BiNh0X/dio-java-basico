@@ -22,9 +22,9 @@ public class TudoEmUm {
         try (Scanner ler = new Scanner(System.in).useLocale(Locale.US);) {
 
             do {
-                String saudacao = mensagem.saudacao();
-                String data = mensagem.dataAtual();
-                String hora = mensagem.horaAtual();
+                String saudacao = mensagem.mostrarSaudacao();
+                String dataAtual = mensagem.mostrarDataAtual();
+                String horaAtual = mensagem.mostrarHoraAtual();
 
                 System.out.println("\n====================================");
                 System.out.println("********** TUDO-EM-UM APP **********");
@@ -32,7 +32,7 @@ public class TudoEmUm {
                 System.out.println("            Menu Inicial            ");
                 System.out.println("------------------------------------");
                 System.out.println("\n          1 - Calculadora\n          2 - Empréstimos\n          0 - Sair\n");
-                System.out.println(hora + "     " + saudacao + "   " + data);
+                System.out.println(horaAtual + "     " + saudacao + "   " + dataAtual);
                 System.out.println("------------------------------------");
                 
                 System.out.print("Escolha uma opção: ");

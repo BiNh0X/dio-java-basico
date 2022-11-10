@@ -7,17 +7,17 @@ import java.time.LocalDateTime;
 
 public class Saudacoes {   
     
-    public String saudacao() {           
+    public String mostrarSaudacao() {           
         
-        LocalDateTime agora = LocalDateTime.now();
+        LocalDateTime dataHoraAtual = LocalDateTime.now();
         DateTimeFormatter formatarHora = DateTimeFormatter.ofPattern("HH");
-        String hora = formatarHora.format(agora);
+        String hora = formatarHora.format(dataHoraAtual);
         
         int horaInteiro = Integer.parseInt(hora);
-        return mensagem(horaInteiro);        
+        return mostrarMensagem(horaInteiro);        
     }
 
-    public String mensagem(int hora) {
+    public String mostrarMensagem(int hora) {
 
         // Entre 5 e 11 da manhã.
         if (hora >= 5 && hora < 12) return "Bom dia!";            
@@ -39,21 +39,21 @@ public class Saudacoes {
         esperar.readLine();
     }
 
-    public String horaAtual() {
+    public String mostrarHoraAtual() {
 
-        LocalDateTime agora = LocalDateTime.now();
+        LocalDateTime dataHoraAtual = LocalDateTime.now();
         DateTimeFormatter formatarHora = DateTimeFormatter.ofPattern("HH:mm:ss");
-        String horaFormatada = formatarHora.format(agora);
+        String hora = formatarHora.format(dataHoraAtual);
         
-        return horaFormatada;
+        return hora;
     }
 
-    public String dataAtual() {
+    public String mostrarDataAtual() {
 
-        LocalDateTime agora = LocalDateTime.now();
+        LocalDateTime dataHoraAtual = LocalDateTime.now();
         DateTimeFormatter formatarData = DateTimeFormatter.ofPattern("dd/MM/uuuu");
-        String dataFormatada = formatarData.format(agora);
+        String data = formatarData.format(dataHoraAtual);
         
-        return dataFormatada;
+        return data;
     }    
 }
