@@ -38,7 +38,7 @@ public class CalculoEmprestimo {
     
     public void mostrarTaxaJuros() {
 
-        System.out.println("Taxa de juros atual = " + TAXA + "%");
+        System.out.print("Taxa de juros atual = " + TAXA + "%");
         parar.continuarMenu();
     }    
 }
