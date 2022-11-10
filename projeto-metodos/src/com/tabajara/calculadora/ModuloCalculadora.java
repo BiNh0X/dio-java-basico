@@ -8,7 +8,7 @@ public class ModuloCalculadora {
     
     public static void calcular() {
         
-        Scanner ler = new Scanner(System.in).useLocale(Locale.US);
+        Scanner leia = new Scanner(System.in).useLocale(Locale.US);
 
         do {
             System.out.println("\n====================================");
@@ -22,15 +22,15 @@ public class ModuloCalculadora {
             double valor1 = 0, valor2 = 0;
             
             System.out.print("Escolha uma opção: ");
-            int opcao = ler.nextInt();
+            int opcao = leia.nextInt();
 
             if ((opcao >= 1) && (opcao <= 4)) {
 
                 System.out.print("1º Valor: ");
-                valor1 = ler.nextDouble();
+                valor1 = leia.nextDouble();
 
                 System.out.print("2º Valor: ");
-                valor2 = ler.nextDouble();
+                valor2 = leia.nextDouble();
             }
             
             Calculadora calculadora = new Calculadora();

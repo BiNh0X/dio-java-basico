@@ -8,7 +8,7 @@ public class ModuloEmprestimo {
     
     public static void emprestimo() {        
 
-        Scanner ler = new Scanner(System.in).useLocale(Locale.US);
+        Scanner leia = new Scanner(System.in).useLocale(Locale.US);
 
         do {
             System.out.println("\n====================================");
@@ -23,15 +23,15 @@ public class ModuloEmprestimo {
             int parcelas = 0;
             
             System.out.print("Escolha uma opção: ");
-            int opcao = ler.nextInt();
+            int opcao = leia.nextInt();
 
             if (opcao == 1) {
 
                 System.out.print("Valor do empréstimo: R$ ");
-                valorEmprestimo = ler.nextDouble();
+                valorEmprestimo = leia.nextDouble();
 
                 System.out.print("Quantidade de parcelas: ");
-                parcelas = ler.nextInt();
+                parcelas = leia.nextInt();
             }
 
             CalculoEmprestimo emprestimo = new CalculoEmprestimo();

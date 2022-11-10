@@ -19,7 +19,7 @@ public class TudoEmUm {
         
         Saudacoes mensagem = new Saudacoes();
         
-        try (Scanner ler = new Scanner(System.in).useLocale(Locale.US);) {
+        try (Scanner leia = new Scanner(System.in).useLocale(Locale.US);) {
 
             do {
                 String saudacao = mensagem.mostrarSaudacao();
@@ -36,7 +36,7 @@ public class TudoEmUm {
                 System.out.println("------------------------------------");
                 
                 System.out.print("Escolha uma opção: ");
-                int opcao = ler.nextInt();
+                int opcao = leia.nextInt();
 
                 switch (opcao) {
 
@@ -50,7 +50,7 @@ public class TudoEmUm {
 
                     case 0:
                         System.out.print("Deseja sair? [S/n] ");
-                        char sair = ler.next().charAt(0);
+                        char sair = leia.next().charAt(0);
 
                         if (sair == 's') break;
                         else {
@@ -63,7 +63,12 @@ public class TudoEmUm {
                         break;
                 }
 
-                if (opcao == 0) break;
+                if (opcao == 0) {
+
+                    leia.close();
+                    break;
+                }
+                                    
             } while (true);
 
             System.out.println("\nSucesso: Execução terminada.");

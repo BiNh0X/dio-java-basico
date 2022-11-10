@@ -5,7 +5,7 @@ import com.tabajara.mensagem.Saudacoes;
 
 public class Calculadora {
     
-    Saudacoes parar = new Saudacoes();
+    Saudacoes continua = new Saudacoes();
 
     public void removerDecimalZero(double valorDecimal) {
 
@@ -23,7 +23,7 @@ public class Calculadora {
         removerDecimalZero(operando2);
         System.out.print(" = ");
         removerDecimalZero(operando1 + operando2);
-        parar.continuarMenu();
+        continua.continuarMenu();
     }
 
     public void subtrair(double operando1, double operando2) {        
@@ -34,7 +34,7 @@ public class Calculadora {
         removerDecimalZero(operando2);
         System.out.print(" = ");
         removerDecimalZero(operando1 - operando2);
-        parar.continuarMenu();
+        continua.continuarMenu();
     }
 
     public void multiplicar(double operando1, double operando2) {        
@@ -45,7 +45,7 @@ public class Calculadora {
         removerDecimalZero(operando2);
         System.out.print(" = ");
         removerDecimalZero(operando1 * operando2);
-        parar.continuarMenu();
+        continua.continuarMenu();
     }
 
     public void dividir(double operando1, double operando2) {        
@@ -56,6 +56,6 @@ public class Calculadora {
         removerDecimalZero(operando2);
         System.out.print(" = ");
         removerDecimalZero(operando1 / operando2);
-        parar.continuarMenu();
+        continua.continuarMenu();
     }    
 }

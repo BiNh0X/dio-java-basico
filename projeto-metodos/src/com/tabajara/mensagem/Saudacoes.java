@@ -33,10 +33,10 @@ public class Saudacoes {
 
     public void continuarMenu() {
 
-        Console esperar = System.console();
+        Console espera = System.console();
         
         System.out.print("\n\n Pressione <ENTER> para continuar...");
-        esperar.readLine();
+        espera.readLine();
     }
 
     public String mostrarHoraAtual() {

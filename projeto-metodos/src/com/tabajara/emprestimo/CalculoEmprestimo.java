@@ -19,7 +19,7 @@ import java.text.NumberFormat;
 public class CalculoEmprestimo {
 
     public static final double TAXA = 4.5;
-    Saudacoes parar = new Saudacoes();    
+    Saudacoes continua = new Saudacoes();    
 
     public void mostrarValorTotal(double valorEmprestimo, int tempo) {
 
@@ -27,7 +27,7 @@ public class CalculoEmprestimo {
 
         double valorTotal = calcularEmprestimo(valorEmprestimo, tempo);
         System.out.print("Valor total = R$ " + formatarDouble.format(valorTotal));                    
-        parar.continuarMenu();
+        continua.continuarMenu();
     }
     
     public double calcularEmprestimo(double valorPresente, int prazo) {
@@ -39,6 +39,6 @@ public class CalculoEmprestimo {
     public void mostrarTaxaJuros() {
 
         System.out.print("Taxa de juros atual = " + TAXA + "%");
-        parar.continuarMenu();
+        continua.continuarMenu();
     }    
 }
