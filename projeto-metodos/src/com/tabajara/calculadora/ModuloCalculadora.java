@@ -7,8 +7,7 @@ import java.util.Scanner;
 public class ModuloCalculadora {
     
     public static void calcular() {
-
-        Calculadora calculadora = new Calculadora();
+        
         Scanner ler = new Scanner(System.in).useLocale(Locale.US);
 
         do {
@@ -32,7 +31,9 @@ public class ModuloCalculadora {
 
                 System.out.print("2º Valor: ");
                 valor2 = ler.nextDouble();
-            }                
+            }
+            
+            Calculadora calculadora = new Calculadora();
 
             switch (opcao) {
 

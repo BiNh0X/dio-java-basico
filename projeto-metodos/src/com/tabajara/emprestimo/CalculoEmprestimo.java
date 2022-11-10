@@ -21,12 +21,6 @@ public class CalculoEmprestimo {
     public static final double TAXA = 4.5;
     Saudacoes parar = new Saudacoes();    
 
-    public double calcularEmprestimo(double valorPresente, int prazo) {
-        
-        double valorFuturo = valorPresente * Math.pow((1 + TAXA / 100), prazo);
-        return valorFuturo;
-    }
-
     public void mostrarValorTotal(double valorEmprestimo, int tempo) {
 
         NumberFormat formatarDouble = new DecimalFormat("#0.00");
@@ -35,6 +29,12 @@ public class CalculoEmprestimo {
         System.out.print("Valor total = R$ " + formatarDouble.format(valorTotal));                    
         parar.continuarMenu();
     }
+    
+    public double calcularEmprestimo(double valorPresente, int prazo) {
+        
+        double valorFuturo = valorPresente * Math.pow((1 + TAXA / 100), prazo);
+        return valorFuturo;
+    }    
     
     public void mostrarTaxaJuros() {
 

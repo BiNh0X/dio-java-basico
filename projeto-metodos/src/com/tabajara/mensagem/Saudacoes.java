@@ -5,9 +5,9 @@ import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
 
-public class Saudacoes {
+public class Saudacoes {   
     
-    public String saudacao() {    
+    public String saudacao() {           
         
         LocalDateTime agora = LocalDateTime.now();
         DateTimeFormatter formatarHora = DateTimeFormatter.ofPattern("HH");
@@ -34,7 +34,7 @@ public class Saudacoes {
     public void continuarMenu() {
 
         Console esperar = System.console();
-
+        
         System.out.print("\n\n Pressione <ENTER> para continuar...");
         esperar.readLine();
     }
@@ -42,20 +42,18 @@ public class Saudacoes {
     public String horaAtual() {
 
         LocalDateTime agora = LocalDateTime.now();
-
         DateTimeFormatter formatarHora = DateTimeFormatter.ofPattern("HH:mm:ss");
         String horaFormatada = formatarHora.format(agora);
-
+        
         return horaFormatada;
     }
 
     public String dataAtual() {
 
         LocalDateTime agora = LocalDateTime.now();
-
         DateTimeFormatter formatarData = DateTimeFormatter.ofPattern("dd/MM/uuuu");
         String dataFormatada = formatarData.format(agora);
-
+        
         return dataFormatada;
     }    
 }
