@@ -1,9 +1,9 @@
 public class Quadrilateros {
 
     // Área do quadrado.
-    public double calcularArea(double lados) {
+    public double calcularArea(double lado) {
 
-        return Math.pow(lados, 2);
+        return Math.pow(lado, 2);
     }
     
     // Área do retângulo.

@@ -50,7 +50,7 @@ public class Main {
                 case 0:
                     break;
                 default:
-                    System.out.println("Erro: Opção inválida!\n");
+                    System.out.println("\nErro: Opção inválida!\n");
                     break;
             }
 
