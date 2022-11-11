@@ -19,20 +19,22 @@ import java.text.NumberFormat;
 public class CalculoEmprestimo {
 
     public static final double TAXA = 4.5;
+    public static final int PORCENTO = 100;
+    
     Saudacoes continua = new Saudacoes();    
 
-    public void mostrarValorTotal(double valorEmprestimo, int tempo) {
+    public void mostrarValorTotal(double valorEmprestimo, int parcelas) {
 
         NumberFormat formatarDouble = new DecimalFormat("#0.00");
 
-        double valorTotal = calcularEmprestimo(valorEmprestimo, tempo);
+        double valorTotal = calcularEmprestimo(valorEmprestimo, parcelas);
         System.out.print("Valor total = R$ " + formatarDouble.format(valorTotal));                    
         continua.continuarMenu();
     }
     
     public double calcularEmprestimo(double valorPresente, int prazo) {
         
-        double valorFuturo = valorPresente * Math.pow((1 + TAXA / 100), prazo);
+        double valorFuturo = valorPresente * Math.pow((1 + TAXA / PORCENTO), prazo);
         return valorFuturo;
     }    
     
