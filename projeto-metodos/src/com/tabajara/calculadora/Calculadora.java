@@ -2,7 +2,6 @@ package com.tabajara.calculadora;
 
 import com.tabajara.mensagem.Saudacoes;
 
-
 public class Calculadora {
     
     Saudacoes continua = new Saudacoes();

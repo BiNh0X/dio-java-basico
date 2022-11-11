@@ -21,11 +21,11 @@ public class CalculoEmprestimo {
     public static final double TAXA = 4.5;
     public static final int PORCENTO = 100;
     
+    NumberFormat formatarDouble = new DecimalFormat("#0.00");
+    
     Saudacoes continua = new Saudacoes();    
 
     public void mostrarValorTotal(double valorEmprestimo, int parcelas) {
-
-        NumberFormat formatarDouble = new DecimalFormat("#0.00");
 
         double valorTotal = calcularEmprestimo(valorEmprestimo, parcelas);
         System.out.print("Valor total = R$ " + formatarDouble.format(valorTotal));                    

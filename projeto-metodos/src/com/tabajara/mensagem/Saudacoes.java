@@ -4,12 +4,12 @@ import java.io.Console;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
-
 public class Saudacoes {   
     
     public String mostrarSaudacao() {           
         
         LocalDateTime dataHoraAtual = LocalDateTime.now();
+
         DateTimeFormatter formatarHora = DateTimeFormatter.ofPattern("HH");
         String hora = formatarHora.format(dataHoraAtual);
         
@@ -26,22 +26,13 @@ public class Saudacoes {
         else if (hora >= 12 && hora < 18) return "Boa tarde!";
 
         // Entre 18 (6h) e 4 (4h) da noite.
-        else if (hora >= 18 || hora < 5) return "Boa noite!";     
-
-        return null;
-    }
-
-    public void continuarMenu() {
-
-        Console espera = System.console();
-        
-        System.out.print("\n\n Pressione <ENTER> para continuar...");
-        espera.readLine();
+        else return "Boa noite!";     
     }
 
     public String mostrarHoraAtual() {
 
         LocalDateTime dataHoraAtual = LocalDateTime.now();
+
         DateTimeFormatter formatarHora = DateTimeFormatter.ofPattern("HH:mm:ss");
         String hora = formatarHora.format(dataHoraAtual);
         
@@ -51,9 +42,18 @@ public class Saudacoes {
     public String mostrarDataAtual() {
 
         LocalDateTime dataHoraAtual = LocalDateTime.now();
+
         DateTimeFormatter formatarData = DateTimeFormatter.ofPattern("dd/MM/uuuu");
         String data = formatarData.format(dataHoraAtual);
         
         return data;
-    }    
+    }
+
+    public void continuarMenu() {
+
+        Console espera = System.console();
+        
+        System.out.print("\n\n Pressione <ENTER> para continuar...");
+        espera.readLine();
+    }   
 }
