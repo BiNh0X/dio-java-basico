@@ -36,7 +36,7 @@ public class TemperaturaMediaSemestral {
             soma += next;
         }
 
-        System.out.printf("A temperatura média semestral é %.1f\n", (soma / temperaturaMedia.size()));
+        System.out.printf("\nA temperatura média semestral é %.1f\n", (soma / temperaturaMedia.size()));
 
         double mediaSemestral = soma / temperaturaMedia.size();
         System.out.println("\n--\tAcima da Média Semestral\t---");
