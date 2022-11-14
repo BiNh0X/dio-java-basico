@@ -40,10 +40,18 @@ public class CulpadoCrime {
 
         System.out.println(" ");
         System.out.print("Classificação: ");
-        if (quantidadeSim == 2) System.out.println("Suspeita");
-        else if (quantidadeSim == 3 || quantidadeSim == 4) System.out.println("Cúmplice");
-        else if (quantidadeSim == 5) System.out.println("Assassina");
-        else System.out.println("Inocente");
+        switch (quantidadeSim) {
+
+            case 1:
+                System.out.println("Inocente"); break;
+            case 2:
+                System.out.println("Suspeita"); break;
+            case 3:
+            case 4:
+                System.out.println("Cúmplice"); break;
+            case 5:
+                System.out.println("Assassina"); break;
+        }
         leia.close();
     }
 }
