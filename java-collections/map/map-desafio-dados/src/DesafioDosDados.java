@@ -12,14 +12,14 @@ Depois, mostre quantas vezes cada valor foi conseguido.
 public class DesafioDosDados {
     public static void main(String[] args) throws Exception {
         
-        Map<String, Integer> jogoDeDados = new TreeMap<>(){{
+        Map<Integer, Integer> jogoDeDados = new TreeMap<>(){{
 
-            put("Lado[1]", 0);
-            put("Lado[2]", 0);
-            put("Lado[3]", 0);
-            put("Lado[4]", 0);
-            put("Lado[5]", 0);
-            put("Lado[6]", 0);
+            put(1, 0);
+            put(2, 0);
+            put(3, 0);
+            put(4, 0);
+            put(5, 0);
+            put(6, 0);
         }};
 
         Random aleatorio = new Random();
@@ -31,23 +31,35 @@ public class DesafioDosDados {
             switch(dado) {
 
                 case 1:
-                    jogoDeDados.put("Lado[1]", jogoDeDados.get("Lado[1]") + 1); break;
+                    jogoDeDados.put(1, jogoDeDados.get(1) + 1); break;
                 case 2:
-                    jogoDeDados.put("Lado[2]", jogoDeDados.get("Lado[2]") + 1); break;
+                    jogoDeDados.put(2, jogoDeDados.get(2) + 1); break;
                 case 3:
-                    jogoDeDados.put("Lado[3]", jogoDeDados.get("Lado[3]") + 1); break;
+                    jogoDeDados.put(3, jogoDeDados.get(3) + 1); break;
                 case 4:
-                    jogoDeDados.put("Lado[4]", jogoDeDados.get("Lado[4]") + 1); break;
+                    jogoDeDados.put(4, jogoDeDados.get(4) + 1); break;
                 case 5:
-                    jogoDeDados.put("Lado[5]", jogoDeDados.get("Lado[5]") + 1); break;
+                    jogoDeDados.put(5, jogoDeDados.get(5) + 1); break;
                 case 6:
-                    jogoDeDados.put("Lado[6]", jogoDeDados.get("Lado[6]") + 1); break;
+                    jogoDeDados.put(6, jogoDeDados.get(6) + 1); break;
+            }
+        }
+
+        System.out.print("\nJogando");
+        // try/catch pego do arquivo ExercicioProposto02.java
+        // do exercício feito pela inst. Camila Cavalcante.
+        for (int i = 0; i < 3; i++) {
+            try {
+                Thread.sleep(2000);
+                System.out.print(".");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
        
-        Set<Entry<String, Integer>> entries = jogoDeDados.entrySet();
-        System.out.println("\n--\tQuantidade de vezes\t--");
-        for (Entry<String,Integer> lado : entries) System.out.println(lado.getKey() +
-         "= " + lado.getValue());
+        Set<Entry<Integer, Integer>> entries = jogoDeDados.entrySet();
+        System.out.println("\nValor " + " Quant. de vezes");
+        for (Entry<Integer,Integer> lado : entries)
+            System.out.printf("%3d %11d\n", lado.getKey(), lado.getValue());
     }
 }
