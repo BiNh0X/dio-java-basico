@@ -7,7 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity     // Toda aplicação que usa JPA tem essa anotação
-
 public class User_ {
     
     @Id // Diz que esse atributo será o "Id" da tabela
