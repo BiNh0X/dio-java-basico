@@ -15,3 +15,4 @@
 - Collections em Java (Lists, Set, Map, Stream)
 - Gerenciamento de Dependências e Build em Java com Maven
 - Imersão no Spring Framework com Spring Boot
+- Criando uma API REST Documentada com Spring Web e Swagger
